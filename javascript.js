@@ -1,14 +1,14 @@
 function getComputerChoice () {
-    let randomnumber = Math.floor(Math.random() * 3);
+    let randomNumber = Math.floor(Math.random() * 3);
     //console.log(randomnumber);
-    if (randomnumber === 0) {
-        return "rock";
+    if (randomNumber === 0) {
+        return "Rock";
     }
-    else if (randomnumber == 1){
-        return "paper";
+    else if (randomNumber === 1){
+        return "Paper";
     }
     else {
-        return "scissors";
+        return "Scissors";
     }
 }
 
