@@ -19,23 +19,25 @@ const computerSelection = getComputerChoice();
 
 // 0 is tie - 1 is computerwin - 2 is playerwin
 
-function playRound (computerSelection, playerSelection) {
+function playRound(computerSelection, playerSelection) {
     if (computerSelection === playerSelection) {
-        return 0;
+        return `Tie, ${computerSelection} does not beat ${playerSelection}`;
     }
     else if (computerSelection === "rock" && playerSelection === "scissors"){
-        return 1;
+        return `You lose ${computerSelection} beats ${playerSelection}`;
     }
     else if (computerSelection === "paper" && playerSelection === "rock") {
-        return 1;
+        return `You lose ${computerSelection} beats ${playerSelection}`;
     }
     else if (computerSelection === "scissors" && playerSelection === "paper") {
-        return 1;
+        return `You lose ${computerSelection} beats ${playerSelection}`;
     }
     else {
-        return 2;
+        return `You win ${playerSelection} beats ${computerSelection}`;
     }
+   
 }
 
+console.log(playRound(computerSelection, playerSelection))
 
 //getComputerChoice();
