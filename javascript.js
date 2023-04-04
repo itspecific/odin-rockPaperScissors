@@ -1,5 +1,3 @@
-const playerSelection = prompt("Rock, Paper, or Scissors?","rock").toLowerCase();
-
 function getComputerChoice () {
     let randomNumber = Math.floor(Math.random() * 3);
     //console.log(randomnumber);
@@ -13,11 +11,6 @@ function getComputerChoice () {
         return "scissors";
     }
 }
-
-const computerSelection = getComputerChoice();
-
-
-// 0 is tie - 1 is computerwin - 2 is playerwin
 
 function playRound(computerSelection, playerSelection) {
     if (computerSelection === playerSelection) {
@@ -38,6 +31,12 @@ function playRound(computerSelection, playerSelection) {
    
 }
 
-console.log(playRound(computerSelection, playerSelection))
+function game () {
+    for (let i = 0; i < 5; i++) {
+        let computerSelection = getComputerChoice();
+        let playerSelection = prompt("Rock, Paper, or Scissors?","rock").toLowerCase();
+        console.log(playRound(computerSelection, playerSelection));
+    }
+}
 
-//getComputerChoice();
+game();
