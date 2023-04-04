@@ -17,5 +17,25 @@ function getComputerChoice () {
 const computerSelection = getComputerChoice();
 
 
+// 0 is tie - 1 is computerwin - 2 is playerwin
+
+function playRound (computerSelection, playerSelection) {
+    if (computerSelection === playerSelection) {
+        return 0;
+    }
+    else if (computerSelection === "rock" && playerSelection === "scissors"){
+        return 1;
+    }
+    else if (computerSelection === "paper" && playerSelection === "rock") {
+        return 1;
+    }
+    else if (computerSelection === "scissors" && playerSelection === "paper") {
+        return 1;
+    }
+    else {
+        return 2;
+    }
+}
+
 
 //getComputerChoice();
