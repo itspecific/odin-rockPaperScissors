@@ -32,11 +32,11 @@ function playRound(computerSelection, playerSelection) {
 }
 
 function game () {
-    for (let i = 0; i < 5; i++) {
+
         let computerSelection = getComputerChoice();
         let playerSelection = prompt("Rock, Paper, or Scissors?","rock").toLowerCase();
         console.log(playRound(computerSelection, playerSelection));
-    }
+
 }
 
 game();
